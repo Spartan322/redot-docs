@@ -42,20 +42,11 @@ if you need a quick writeup about Godot Engine.
     platforms, including the major desktop platforms (Linux, macOS, Windows)
     as well as mobile (Android, iOS) and web-based (HTML5) platforms.
 
-<<<<<<< HEAD
     Godot is completely free and open source under the permissive MIT
     license. No strings attached, no royalties, nothing. Users' games are
     theirs, down to the last line of engine code. Godot's development is fully
     independent and community-driven, empowering users to help shape their
-    engine to match their expectations. It is supported by the `Software
-    Freedom Conservancy <https://sfconservancy.org>`_ not-for-profit.
-=======
-    Godot is completely free and open source under the :ref:`permissive MIT
-    license <doc_complying_with_licenses>`. No strings attached, no royalties,
-    nothing. Users' games are theirs, down to the last line of engine code.
-    Godot's development is fully independent and community-driven, empowering
-    users to help shape their engine to match their expectations.
->>>>>>> 71df32627 (Remove all mentions of foundation (#29))
+    engine to match their expectations.
 
 For a more in-depth view of the engine, you are encouraged to read this
 documentation further, especially the :ref:`Step by step
