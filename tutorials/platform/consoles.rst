@@ -25,54 +25,6 @@ to a console platform is as follows:
   `PEGI <https://pegi.info/>`__. Indie developers can generally get a rating
   for cheaper compared to more established developers.
 
-Due to the complexity of the process, the budget to publish a game by yourself on a
-single console often exceeds $1,000 (this is a rough figure).
+Due to the complexity of the process, many studios and developers prefer to
+outsource console porting.
 
-Official support
-----------------
-
-Godot supports the Linux-based Steam Deck. The reason other consoles are not
-officially supported are:
-
-- To develop for consoles, one must be licensed as a company.
-  As an open source project, Godot does not have such a legal figure.
-- Console SDKs are secret and covered by non-disclosure agreements.
-  Even if we could get access to them, we could not publish
-  the platform-specific code under an open source license.
-- Consoles require specialized hardware to develop for, so regular individuals
-  can't create games for them anyway.
-
-However, it is still possible to port your games to consoles thanks to services
-provided by third-party companies.
-
-.. note::
-
-    In practice, the process is quite similar to Unity and Unreal Engine, except
-    that you need to contact a third-party developer to handle the porting
-    process. In other words, there is no engine that is legally allowed to
-    distribute console export templates without requiring the user to prove that
-    they are a licensed console developer. Doing so would violate the console
-    manufacturer's NDA.
-
-Third-party support
--------------------
-
-Console ports of Godot are offered by third-party companies (which have
-ported Godot on their own). These companies also offer publishing of
-your games to various consoles.
-
-Following is the list of providers:
-
-- `Lone Wolf Technology <http://www.lonewolftechnology.com/>`_ offers
-  Switch and PS4 porting and publishing of Godot games.
-- `Pineapple Works <https://pineapple.works/>`_ offers
-  Switch, Xbox One & Xbox Series X/S (GDK) porting and publishing of Godot games (GDScript/C#).
-- `RAWRLAB games <https://www.rawrlab.com/>`_ offers
-  Switch porting of Godot games.
-- `mazette! games <https://mazette.games/>`_ offers
-  Switch, Xbox One and Xbox Series X/S porting and publishing of Godot games.
-
-If your company offers porting, or porting *and* publishing services for Godot games,
-feel free to
-`open an issue or pull request <https://github.com/godotengine/godot-docs>`_
-to add your company to the list above.
