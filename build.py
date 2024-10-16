@@ -3,14 +3,11 @@
 """
 
 import argparse
-import fnmatch
 import os
-import re
 from shutil import copyfile
 import shutil
-import sys
-import codecs
 from distutils.dir_util import copy_tree
+import subprocess
 
 
 
@@ -49,6 +46,8 @@ def build():
     print("Building...")
 
     printDir(inputDir);
+
+    subprocess.run(["ls", "-l"]) 
 
     print(parser.epilog)
 
