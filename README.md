@@ -22,7 +22,7 @@ the ZIP archive then open the `RedotEngine.epub` file in an e-book reader applic
 
 We are transitioning from Godot to Redot. In this period, a temporary solution is available.
 ```
-python migrate.py . _migrated True
+python migrate.py . _migrated
 ```
 
 After the docs are converted, you can build with

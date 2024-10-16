@@ -64,8 +64,8 @@ def build():
     print("Printing dir again")
     os.system("ls -la")
 
-    print("See if we have Wrangler")
-    os.system("wrangler --version")
+    print("See if we have Sphinx")
+    os.system("sphinx-build -b html ./_migrated/ _build/html")
     print(parser.epilog)
 
 if __name__ == "__main__":
