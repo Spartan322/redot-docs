@@ -10,6 +10,17 @@ from distutils.dir_util import copy_tree
 import subprocess
 
 
+def run_command(command):
+    p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
+
+    (output, err) = p.communicate()
+
+    print(output)
+    #This makes the wait possible
+    p_status = p.wait()
+
+    #This will give you the output of the command being executed
+    print(f"Command output: {output}")
 
 def printDir(inputDirectory):
     for root, dirs, files in os.walk(inputDirectory):
@@ -45,8 +56,6 @@ def build():
     
     print("Building...")
 
-    printDir(inputDir)
-
     print("trying os.system")
     os.system("ls -la")
 
@@ -61,23 +70,11 @@ def build():
     print("trying cp")
     os.system(f"cp test.txt {outputDir}/index.html") 
 
-    print("Printing dir again")
-    os.system("ls -la")
-
-    print("See if we have Sphinx")
+    migdir = "_migrated"
+    run_command(f"python migrate.py --tiny . {migdir}")
 
     #This command could have multiple commands separated by a new line \n
-    some_command = "sphinx-build -b html -j 4 . ./_build/html"
-
-    p = subprocess.Popen(some_command, stdout=subprocess.PIPE, shell=True)
-
-    (output, err) = p.communicate()
-
-    #This makes the wait possible
-    p_status = p.wait()
-
-    #This will give you the output of the command being executed
-    print(f"Command output: {output}")
+    run_command(f"sphinx-build -b html -j 4 {migdir} {outputDir}")
 
     print(parser.epilog)
 
