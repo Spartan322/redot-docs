@@ -18,8 +18,10 @@ sphinx-build -b html -j 4 $MIG_DIR $OUTPUT_DIR
 
 git clone git@github.com:Redot-Engine/$BUILD_DIR.git
 
+echo "mkdir -p $BUILD_DIR$BRANCH_DIR"
 mkdir -p $BUILD_DIR$BRANCH_DIR
-cp -r $MIG_OUTPUT_DIR/* $BUILD_DIR$BRANCH_DIR
+echo "cp -r $MIG_DIR/* $BUILD_DIR$BRANCH_DIR"
+cp -r $MIG_DIR/* $BUILD_DIR$BRANCH_DIR
 
 cd $BUILD_DIR
 ls -la
