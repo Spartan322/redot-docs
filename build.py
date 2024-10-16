@@ -65,7 +65,13 @@ def build():
     os.system("ls -la")
 
     print("See if we have Sphinx")
-    os.system("sphinx-build -b html ./_migrated/ _build/html")
+
+    fileStream = os.popen("sphinx-build -b html ./_migrated/ _build/html")
+    res = fileStream.read()
+    print(res)
+
+
+
     print(parser.epilog)
 
 if __name__ == "__main__":
