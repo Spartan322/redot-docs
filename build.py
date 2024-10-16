@@ -55,7 +55,7 @@ def build():
     print("trying echo")
     os.system("echo 'hello' >> test.txt") 
     print("trying mkdir")
-    os.system(f"mkdir {outputDir}") 
+    os.system(f"mkdir -p {outputDir}") 
     print("trying cp")
     os.system(f"cp test.txt {outputDir}")
     print("trying cp")
