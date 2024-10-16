@@ -77,7 +77,7 @@ def build():
     p_status = p.wait()
 
     #This will give you the output of the command being executed
-    print("Command output: " + output)
+    print(f"Command output: {output}")
 
     print(parser.epilog)
 
