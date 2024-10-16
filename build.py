@@ -50,17 +50,19 @@ def build():
     print("trying os.system")
     os.system("ls -la")
 
-    print("trying subprocess.run")
+    print("trying touch")
     os.system("touch test.txt") 
+    print("trying echo")
     os.system("echo 'hello' >> test.txt") 
+    print("trying mkdir")
     os.system("mkdir _build") 
+    print("trying cp")
     os.system("cp test.txt _build") 
+    print("trying cp")
     os.system("cp test.txt _build/index.html") 
 
-    os.system()
-
     print("Printing dir again")
-    printDir(inputDir)
+    os.system("ls -la")
 
     print(parser.epilog)
 
