@@ -41,8 +41,6 @@ def build():
     else:
         print("output can't be . or start with /")
         exit(1)
-    includeUnimplemented = args.extended
-    ignoreClasses = args.tiny
 
     if (os.path.exists(outputDir)):
         print(f"Deleting {outputDir}")
@@ -50,7 +48,7 @@ def build():
     
     print("Building...")
 
-    printDir(parser.input);
+    printDir(inputDir);
 
     print(parser.epilog)
 
