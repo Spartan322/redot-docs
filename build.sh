@@ -1,10 +1,11 @@
 #!/bin/bash
 
-INPUT_DIR=$1
-OUTPUT_DIR=$2
+INPUT_DIR="."
+OUTPUT_DIR="_temp/html"
 
 MIG_DIR="./_migrated"
 BUILD_DIR="redot-docs-build"
+BRANCH_DIR="$/en/master"
 
 touch test.txt 
 echo 'hello' >> test.txt 
@@ -17,7 +18,9 @@ sphinx-build -b html -j 4 $MIG_DIR $OUTPUT_DIR
 
 git clone git@github.com:Redot-Engine/$BUILD_DIR.git
 
-cp -r $MIG_OUTPUT_DIR/* $BUILD_DIR/en/master
+mkdir -p $BUILD_DIR$BRANCH_DIR
+cp -r $MIG_OUTPUT_DIR/* $BUILD_DIR$BRANCH_DIR
 
 cd $BUILD_DIR
 ls -la
+git push -f
