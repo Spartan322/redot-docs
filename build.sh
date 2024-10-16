@@ -13,13 +13,12 @@ echo 'hello' >> test.txt
 mkdir -p $MIGRATE_DIR
 python migrate.py --tiny $INPUT_DIR $MIGRATE_DIR
 mkdir -p $SPHINX_DIR
-sphinx-build -b html -j 4 $MIG_DIR $SPHINX_DIR
+sphinx-build -b html -j 4 $MIGRATE_DIR $SPHINX_DIR
 
 git clone git@github.com:Redot-Engine/$BUILD_ROOT.git
 
-echo "mkdir -p $BUILD_DIR$BRANCH_DIR"
+echo "mkdir -p $BUILD_DIR"
 mkdir -p $BUILD_DIR
-ls -ra $MIG_DIR
 echo "cp -r $SPHINX_DIR/* $BUILD_DIR"
 cp -r $SPHINX_DIR/* $BUILD_DIR
 
