@@ -66,11 +66,18 @@ def build():
 
     print("See if we have Sphinx")
 
-    fileStream = os.popen("sphinx-build -b html ./_migrated/ _build/html")
-    res = fileStream.read()
-    print(res)
+    #This command could have multiple commands separated by a new line \n
+    some_command = "sphinx-build -b -j 8 html ./_migrated/ _build/html"
 
+    p = subprocess.Popen(some_command, stdout=subprocess.PIPE, shell=True)
 
+    (output, err) = p.communicate()
+
+    #This makes the wait possible
+    p_status = p.wait()
+
+    #This will give you the output of the command being executed
+    print("Command output: " + output)
 
     print(parser.epilog)
 
