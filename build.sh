@@ -17,6 +17,6 @@ sphinx-build -b html -j 4 $MIG_DIR $OUTPUT_DIR
 # do we have node?
 node --version
 
-# do we have wrangler?
-wrangler --version
+# do we have git?
+git --version
 
