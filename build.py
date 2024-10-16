@@ -64,6 +64,8 @@ def build():
     print("Printing dir again")
     os.system("ls -la")
 
+    print("See if we have Wrangler")
+    os.system("wrangler --version")
     print(parser.epilog)
 
 if __name__ == "__main__":
