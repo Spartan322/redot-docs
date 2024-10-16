@@ -67,7 +67,7 @@ def build():
     print("See if we have Sphinx")
 
     #This command could have multiple commands separated by a new line \n
-    some_command = "sphinx-build -b -j 8 html ./_migrated/ _build/html"
+    some_command = "sphinx-build -b html -j 4 . ./_build/html"
 
     p = subprocess.Popen(some_command, stdout=subprocess.PIPE, shell=True)
 
