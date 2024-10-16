@@ -20,8 +20,8 @@ git clone git@github.com:Redot-Engine/$BUILD_ROOT.git
 echo "mkdir -p $BUILD_DIR$BRANCH_DIR"
 mkdir -p $BUILD_DIR
 ls -ra $MIG_DIR
-echo "cp -r $OUTPUT_DIR/* $BUILD_DIR"
-cp -r $OUTPUT_DIR/* $BUILD_DIR
+echo "cp -r $SPHINX_DIR/* $BUILD_DIR"
+cp -r $SPHINX_DIR/* $BUILD_DIR
 
 cp test.txt $$BUILD_DIR
 cp test.txt $$BUILD_DIR/index.html 
