@@ -11,11 +11,12 @@ import subprocess
 
 
 def run_command(command):
+    print(f"Running command {command}")
     p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
 
     (output, err) = p.communicate()
 
-    print(output)
+    #print(output)
     #This makes the wait possible
     p_status = p.wait()
 
