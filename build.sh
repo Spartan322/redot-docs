@@ -11,5 +11,5 @@ mkdir -p $OUTPUT_DIR
 cp test.txt $OUTPUT_DIR
 cp test.txt $OUTPUT_DIR/index.html 
 
-python migrate.py --tiny INPUT_DIR $MIG_DIR
+python migrate.py --tiny $INPUT_DIR $MIG_DIR
 sphinx-build -b html -j 4 $MIG_DIR $OUTPUT_DIR
