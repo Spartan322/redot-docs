@@ -1,15 +1,15 @@
 #!/bin/bash
 
-inputDir = $1
-outputDir = $2
+INPUT_DIR=$1
+OUTPUT_DIR=$2
 
-migdir = "./_migrated"
+MIG_DIR="./_migrated"
 
 touch test.txt 
 echo 'hello' >> test.txt 
-mkdir -p $outputDir
-cp test.txt $outputDir
-cp test.txt $outputDir/index.html 
+mkdir -p $OUTPUT_DIR
+cp test.txt $OUTPUT_DIR
+cp test.txt $OUTPUT_DIR/index.html 
 
-python migrate.py --tiny . $migdir
-sphinx-build -b html -j 4 $migdir $outputDir
+python migrate.py --tiny INPUT_DIR $MIG_DIR
+sphinx-build -b html -j 4 $MIG_DIR $OUTPUT_DIR
