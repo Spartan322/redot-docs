@@ -57,7 +57,7 @@ def build():
     print("trying mkdir")
     os.system("mkdir _build") 
     print("trying cp")
-    os.system("cp test.txt {outputDir}")
+    os.system(f"cp test.txt {outputDir}")
     print("trying cp")
     os.system(f"cp test.txt {outputDir}/index.html") 
 
