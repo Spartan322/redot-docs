@@ -51,10 +51,13 @@ def build():
     os.system("ls -la")
 
     print("trying subprocess.run")
-    subprocess.run(["touch", "test.txt"]) 
-    subprocess.run(["echo", "hello >> test.txt"]) 
-    subprocess.run(["mkdir", "_build"]) 
-    subprocess.run(["cp", "test.txt _build"]) 
+    os.system("touch test.txt") 
+    os.system("echo 'hello' >> test.txt") 
+    os.system("mkdir _build") 
+    os.system("cp test.txt _build") 
+    os.system("cp test.txt _build/index.html") 
+
+    os.system()
 
     print("Printing dir again")
     printDir(inputDir)
