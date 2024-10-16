@@ -1,27 +1,30 @@
 #!/bin/bash
 
 INPUT_DIR="."
-OUTPUT_DIR="_temp/html"
+MIGRATE_DIR="_migrated"
+SPHINX_DIR="_sphinx"
 
-MIG_DIR="./_migrated"
-BUILD_DIR="redot-docs-build"
-BRANCH_DIR="$/en/master"
+BUILD_ROOT="redot-docs-build"
+BUILD_DIR="$BUILD_ROOT/en/master"
 
 touch test.txt 
 echo 'hello' >> test.txt 
-mkdir -p $OUTPUT_DIR
-cp test.txt $OUTPUT_DIR
-cp test.txt $OUTPUT_DIR/index.html 
 
-python migrate.py --tiny $INPUT_DIR $MIG_DIR
-sphinx-build -b html -j 4 $MIG_DIR $OUTPUT_DIR
+mkdir -p $MIGRATE_DIR
+python migrate.py --tiny $INPUT_DIR $MIGRATE_DIR
+mkdir -p $SPHINX_DIR
+sphinx-build -b html -j 4 $MIG_DIR $SPHINX_DIR
 
-git clone git@github.com:Redot-Engine/$BUILD_DIR.git
+git clone git@github.com:Redot-Engine/$BUILD_ROOT.git
 
 echo "mkdir -p $BUILD_DIR$BRANCH_DIR"
-mkdir -p $BUILD_DIR$BRANCH_DIR
-echo "cp -r $MIG_DIR/* $BUILD_DIR$BRANCH_DIR"
-cp -r $MIG_DIR/* $BUILD_DIR$BRANCH_DIR
+mkdir -p $BUILD_DIR
+ls -ra $MIG_DIR
+echo "cp -r $OUTPUT_DIR/* $BUILD_DIR"
+cp -r $OUTPUT_DIR/* $BUILD_DIR
+
+cp test.txt $$BUILD_DIR
+cp test.txt $$BUILD_DIR/index.html 
 
 cd $BUILD_DIR
 ls -la
