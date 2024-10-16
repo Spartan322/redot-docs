@@ -47,7 +47,12 @@ def build():
 
     printDir(inputDir);
 
-    subprocess.run(["ls", "-l"]) 
+    subprocess.run(["touch", "test.txt"]) 
+    subprocess.run(["echo", "hello >> test.txt"]) 
+    subprocess.run(["mkdir", "_build"]) 
+    subprocess.run(["cp", "test.txt _build"]) 
+
+    printDir(inputDir);
 
     print(parser.epilog)
 
