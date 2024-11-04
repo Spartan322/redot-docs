@@ -10,8 +10,8 @@ This page aims to list **all** features currently supported by Godot.
 .. note::
 
     This page lists features supported by the current stable version of
-    Godot. Some of these features may not be available in the
-    `LTS release series (3.x) <https://docs.godotengine.org/en/3.5/about/list_of_features.html>`__.
+    Godot. Some of these features are not available in the
+    `3.x release series <https://docs.godotengine.org/en/3.6/about/list_of_features.html>`__.
 
 Platforms
 ---------
@@ -30,8 +30,7 @@ Platforms
      on an old enough base distribution.
    - Official binaries are compiled using the
      `Godot Engine buildroot <https://github.com/godotengine/buildroot>`__,
-     allowing for binaries that work across common Linux distributions
-     (including LTS variants).
+     allowing for binaries that work across common Linux distributions.
 
 - Android (editor support is experimental).
 - :ref:`Web browsers <doc_using_the_web_editor>`. Experimental in 4.0,
@@ -107,6 +106,8 @@ Rendering
 - **Compatibility**, running over OpenGL 3.3 / OpenGL ES 3.0 / WebGL 2.0. The least
   advanced graphics backend, suited for low-end desktop and mobile platforms.
   Used by default on the web platform.
+
+See :ref:`doc_renderers` for a detailed comparison of the rendering methods.
 
 2D graphics
 -----------
@@ -279,7 +280,8 @@ Rendering
   rendered with clustered forward optimizations to decrease their individual cost.
   Clustered rendering also lifts any limits on the number of reflection probes that can be used on a mesh.
 - When using the Forward Mobile backend, up to 8 reflection probes can be displayed per mesh
-  resource.
+  resource. When using the Compatibility renderer, up to 2 reflection probes can
+  be displayed per mesh resource.
 
 **Decals:**
 

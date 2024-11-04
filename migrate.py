@@ -156,6 +156,7 @@ mappings = [
     ('https://raw.githubusercontent.com/godotengine/godot/master', 'https://raw.githubusercontent.com/redot-engine/redot-engine/master'),
     ('https://github.com/godotengine/godot-demo-projects', 'https://github.com/redot-engine/redot-demo-projects'),
     ('https://discord.gg/bdcfAYM4W9', 'https://discord.gg/redot'),
+    ('https://discord.gg/godotengine', 'https://discord.gg/redot'),
     ('https://github.com/godotengine/godot', 'https://github.com/redot-engine/redot-engine'),
     ('https://github.com/godotengine/godot-proposals', 'https://github.com/redot-engine/redot-proposals'),
     ('https://raw.githubusercontent.com/godotengine/godot-docs', 'https://raw.githubusercontent.com/redot-engine/redot-docs'),
