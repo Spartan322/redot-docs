@@ -100,6 +100,7 @@ Nodes
     class_editorresourcepreview
     class_editorscriptpicker
     class_editorspinslider
+    class_editortoaster
     class_filedialog
     class_filesystemdock
     class_flowcontainer
@@ -147,6 +148,7 @@ Nodes
     class_line2d
     class_lineedit
     class_linkbutton
+    class_lookatmodifier3d
     class_margincontainer
     class_marker2d
     class_marker3d
@@ -775,6 +777,7 @@ Other objects
     class_gdextensionmanager
     class_geometry2d
     class_geometry3d
+    class_gltfobjectmodelproperty
     class_hashingcontext
     class_hmaccontext
     class_httpclient
@@ -1030,6 +1033,7 @@ Editor-only
     class_editorsettings
     class_editorspinslider
     class_editorsyntaxhighlighter
+    class_editortoaster
     class_editortranslationparserplugin
     class_editorundoredomanager
     class_editorvcsinterface
