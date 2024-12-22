@@ -10,8 +10,8 @@ This page aims to list **all** features currently supported by Godot.
 .. note::
 
     This page lists features supported by the current stable version of
-    Godot. Some of these features may not be available in the
-    `LTS release series (3.x) <https://docs.godotengine.org/en/3.5/about/list_of_features.html>`__.
+    Godot. Some of these features are not available in the
+    `3.x release series <https://docs.godotengine.org/en/3.6/about/list_of_features.html>`__.
 
 Platforms
 ---------
@@ -30,8 +30,7 @@ Platforms
      on an old enough base distribution.
    - Official binaries are compiled using the
      `Godot Engine buildroot <https://github.com/godotengine/buildroot>`__,
-     allowing for binaries that work across common Linux distributions
-     (including LTS variants).
+     allowing for binaries that work across common Linux distributions.
 
 - Android (editor support is experimental).
 - :ref:`Web browsers <doc_using_the_web_editor>`. Experimental in 4.0,
@@ -367,7 +366,7 @@ Rendering
 - ETC2 (not supported on macOS).
 - S3TC (not supported on mobile/Web platforms).
 
-**Anti-aliasing:**
+**Antialiasing:**
 
 - Temporal :ref:`antialiasing <doc_3d_antialiasing>` (TAA).
 - AMD FidelityFX Super Resolution 2.2 :ref:`antialiasing <doc_3d_antialiasing>` (FSR2),
@@ -487,7 +486,7 @@ Scripting
    - Use any build system and language features you wish.
 
 - Actively developed GDExtension bindings for `D <https://github.com/godot-dlang/godot-dlang>`__,
-  `Haxe <https://hxgodot.github.io/>`__, `Swift <https://github.com/migueldeicaza/SwiftGodot>`__, and `Rust <https://github.com/godot-rust/gdextension>`__
+  `Swift <https://github.com/migueldeicaza/SwiftGodot>`__, and `Rust <https://github.com/godot-rust/gdextension>`__
   bindings provided by the community. (Some of these bindings may be experimental and not production-ready).
 
 Audio
